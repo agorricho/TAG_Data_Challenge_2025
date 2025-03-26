@@ -26,7 +26,7 @@ st.markdown("#### Please select the function you want to use in the side bar:")
 
 st.markdown("- ##### Chatbot: Use the chatbot to query the documents in the knowledge base.")
 
-st.markdown("- ##### Knowledge Base: Add docuemtns and url links to the knwledge base. Select which documents you want to use for your queries.")
+st.markdown("- ##### Knowledge Base: Add documents and url links to the knowledge base. Select which documents you want to use for your queries.")
     
 st.markdown("#### Develoved by the GSU Data Panthers:")
 st.markdown("##### Alejandro Gorricho +1 404-661-0443")
