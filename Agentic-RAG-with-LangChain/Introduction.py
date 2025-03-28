@@ -16,7 +16,7 @@ with col2:
    st.header('TAG Data Challenge 2025')
 
 with st.sidebar:
-    st.success("Select a function above")
+    st.success("Please select an option above")
 
 st.markdown("#### This app was developed to allow Pathways-2-Life to access an extense knowledge base of documents.")
 
