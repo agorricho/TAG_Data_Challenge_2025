@@ -1,3 +1,6 @@
+
+### IMPORT DEPENDENCIES ###
+
 # import basics
 import os
 from dotenv import load_dotenv
@@ -67,7 +70,7 @@ st.set_page_config(page_title="Agentic RAG Chatbot",
                    page_icon="🤖",
                    layout="wide")
 
-# crea la barra lateral
+# create side bar
 with st.sidebar:
         st.title('LLM:')
         
@@ -110,7 +113,7 @@ with st.sidebar:
                 # For article checkboxes
                 selected_articles = [article.strip() for idx, article in enumerate(all_articles) if st.checkbox(article.strip(), value=True, key=f"article_{idx}")]
 
-# Crea layout para el encabezado en la página principal
+# layout for main page
 col1, col2 = st.columns([1, 5])
 
 with col1:
@@ -119,8 +122,6 @@ with col1:
 with col2:
    st.header('Agentic RAG Chatbot')
 
-
-
  
 # initiating llm
 llm = ChatOpenAI(model=llm,temperature=0)
@@ -128,7 +129,6 @@ llm = ChatOpenAI(model=llm,temperature=0)
 # pulling prompt from hub
 prompt = hub.pull("hwchase17/openai-functions-agent")
 
-custom_prompt = prompt
 
 # creating the retriever tool
 @tool(response_format="content_and_artifact")
@@ -150,8 +150,6 @@ agent = create_tool_calling_agent(llm, tools, prompt)
 
 # create the agent executor
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
-
-
 
 
 # initialize chat history

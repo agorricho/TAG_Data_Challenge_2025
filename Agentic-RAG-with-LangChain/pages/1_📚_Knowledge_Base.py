@@ -1,3 +1,5 @@
+### IMPORT DEPENDENCIES ###
+
 # import basics
 import os
 import glob
@@ -109,7 +111,10 @@ with st.sidebar:
         else:
             st.warning("Please confirm which data you want to delete by checking the boxes above.")
 
-# Crea layout para el encabezado en la página principal
+
+### SET UP FRONT AND BACK END ###
+
+# layout for main page
 col_11, col_12 = st.columns([1, 5])
 
 with col_11:
@@ -118,10 +123,7 @@ with col_11:
 with col_12:
    st.header('Knowledge Base')
 
-
-### SET UP FRONT AND BACK END ###
-
-# Crea layout para el encabezado en la página principal
+# layout for page fuinctionality
 col_21, col_22, col_23 = st.columns([5,1,5])
 
 # Load PDF documents
@@ -212,11 +214,11 @@ with col_21:
     # For document checkboxes
     selected_files = [file for idx, file in enumerate(all_files) if st.checkbox(file, value=True, key=f"doc_{idx}")]
 
+# empty placeholder
 with col_22:
-    # empty placeholder
     st.write("")
 
-
+# load web articles
 with col_23:
     st.markdown("### Upload Articles")
 

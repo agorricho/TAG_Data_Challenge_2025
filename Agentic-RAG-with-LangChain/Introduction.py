@@ -1,12 +1,17 @@
+### IMPORT DEPENDENCIES ###
+
 import streamlit as st
 
+### SET UP STREAMLIT APP ###
+
+# initiating streamlit app
 st.set_page_config(
     page_title="Agentic RAG Chatbot",
     page_icon="🤖",
     layout='wide',
 )
 
-# Crea layout para el encabezado en la página principal
+# Layout for the page
 col1, col2 = st.columns([1, 5])
 
 with col1:
